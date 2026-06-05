@@ -4,7 +4,11 @@ import subprocess
 with open("README.md", "w", encoding="utf-8") as archivo:
     archivo.write("# Modificado desde Python\n")
     archivo.write("Este es un cambio real para que git lo detecte\n")
-print("Archivo modificado correctamente")
+print("Estado del archivo README.md modificado.")
+
+# Nota: Ejecutamos git status para verificar el estado del repositorio antes de hacer commit
+subprocess.run(["git", "status"])
+print("Estado del repositorio verificado (git status).")
 
 # 2. Ejecutar el comando git desde Python
 print("Iniciando automatización git...")
